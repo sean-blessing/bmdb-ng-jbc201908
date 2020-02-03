@@ -1,0 +1,23 @@
+<app-menu></app-menu>
+<span class='component-title'>[{{title}}]</span>
+<span ><a routerLink='/movie/create'><img width='20' height='20' 
+        src='assets/add-icon.png' title='Add New'>
+       </a>
+</span>
+<table *ngIf='movies' class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>ID</th><th>Title</th><th>Year</th><th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let movie of movies'>
+            <td>{{movie.id}}</td><td>{{movie.title}}</td><td>{{movie.year}}</td>
+            <td>
+                <a routerLink='/movie/detail/{{movie.id}}'><img src='assets/details.png' width='20' height='20' title='Detail'></a>
+                    | 
+                <a routerLink='/movie/edit/{{movie.id}}'><img src='assets/pencil-icon.png' width='20' height='20' title='Edit'></a>
+            </td>
+        </tr>
+    </tbody>
+</table>

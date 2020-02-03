@@ -1,0 +1,14 @@
+<app-menu></app-menu>
+<span class='component-title'>[{{title}}]</span>
+<table *ngIf='actors' class="table table-sm table-striped">
+    <thead>
+    <tr>
+        <th>ID</th><th>Name</th><th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let a of actors">
+        <td>{{a.id}}</td><td>{{a.lastName + ", " + a.firstName}}</td><td>E | D</td>
+    </tr>
+    </tbody>
+</table>
